@@ -3,7 +3,7 @@
 		canvascurler.php
 		Title: Canvas Person Fetch - User Lookup
 		Author: Nazmus
-		URL: http://www.easyprogramming.net
+		URL: https://www.easyprogramming.net
 		Instructure Docs: https://canvas.instructure.com/doc/api/users.html
 		Github: https://github.com/nlinux1/
 
