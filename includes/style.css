@@ -1,0 +1,35 @@
+/*
+	style.css
+	Title: Canvas Person Fetch - User Lookup
+	Author: Nazmus
+	URL: http://www.easyprogramming.net
+	Instructure Docs: https://canvas.instructure.com/doc/api/users.html
+	Github: https://github.com/naztronaut/
+
+	Custom CSS file for EFetch
+*/
+
+#resultTitle{
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+#output{
+    padding-bottom: 25px;
+}
+
+#multiples{
+    margin-bottom: 25px;
+}
+#spinner{
+    display: none;
+}
+
+/*
+table img {
+    width: 50px;
+    height: auto;
+}*/
