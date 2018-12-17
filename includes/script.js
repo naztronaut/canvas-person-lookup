@@ -44,10 +44,9 @@ $(document).ready(function () {
         (showEmail == 1) ? $(thead).append($(row).append($("<th>").append("Email").addClass("info"))): ''; //if show email is checked
 
         $(table).append($(thead));
-        var list = $("#text").val().split("\n"); // array item per newline 
+        var list = $("#text").val().trim().split("\n"); // array item per newline 
         list.forEach(function (item, i) {
-            var item1;
-            (item == "") ? "" : searchMe(item);
+            (item == "") ? "" : searchMe(item.trim());
 
             function searchMe(item) {
                 $.ajax({
@@ -103,9 +102,9 @@ function getEmail(id, pId, eId, sName, table, domain, apiKey) {
 //            }
         },
         success: function (data) {
-            console.log(data);
-            console.log(apiKey);
-            console.log(domain);
+//            console.log(data);
+//            console.log(apiKey);
+//            console.log(domain);
             var email = data['primary_email']; //get primary email from canvas profile 
 
             if (data !== '') {
@@ -113,7 +112,7 @@ function getEmail(id, pId, eId, sName, table, domain, apiKey) {
                     $(tr).append($("<td>").append('<a href="https://' + domain + '.instructure.com/users/' + data['id'] + '" target="_blank">' + data['name'] + '</a>'));
                 }
                 if (pId == 1) {
-                    $(tr).append($("<td>").append(data['sis_login_id']));
+                    $(tr).append($("<td>").append(data['sis_user_id']));
                 }
                 if (eId == 1) {
                     $(tr).append($("<td>").append(email));
